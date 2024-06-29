@@ -3,8 +3,9 @@ $(document).ready(function () {
   AOS.init();
   document.querySelectorAll(".nav-link").forEach((e) => {
     const urlLink = window.location.pathname;
+    console.log(urlLink);
     e.classList.remove("active");
-    if (e.getAttribute("href") == urlLink) {
+    if (`/${e.getAttribute("href")}` == `${urlLink}`) {
       e.classList.add("active");
     }
   });
